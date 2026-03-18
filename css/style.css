@@ -288,3 +288,22 @@ img {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* --------------------------------------------------------------------------
+   Infinite Ticker Animation
+   -------------------------------------------------------------------------- */
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-container {
+  display: flex;
+  gap: 4rem; /* Match the gap from HTML design */
+  animation: ticker-scroll 40s linear infinite;
+  width: max-content;
+}
+
+.ticker-container:hover {
+  animation-play-state: paused;
+}

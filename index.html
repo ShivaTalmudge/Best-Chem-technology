@@ -177,18 +177,35 @@
 </section>
 
 <!-- Advanced Brands / Tech Stack Strip -->
-<div class="border-b border-gray-100 bg-white relative z-20 py-8 lg:py-10">
+<div class="border-b border-gray-100 bg-white relative z-20 py-8 lg:py-10 overflow-hidden">
   <div class="max-w-container mx-auto px-4 md:px-8">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-10 opacity-70 grayscale hover:grayscale-0 transition-opacity duration-500">
-      <span class="text-sm font-bold text-gray-400 uppercase tracking-widest text-center md:text-left shrink-0">Industrial Capabilities</span>
-      <!-- Ticker container with fixed overflow-x behavior -->
-      <div class="flex items-center overflow-x-auto w-full hide-scrollbar px-4 md:px-0">
-        <div class="flex items-center gap-8 md:gap-16 mx-auto md:ml-auto md:mr-0 min-w-max">
-          <span class="text-lg md:text-2xl font-black text-gray-800 tracking-tighter">CAD/CAM Integration</span>
-          <span class="text-lg md:text-2xl font-black text-gray-300">|</span>
-          <span class="text-lg md:text-2xl font-black text-gray-800 tracking-tighter">3-Axis VMC Machining</span>
-          <span class="text-lg md:text-2xl font-black text-gray-300">|</span>
-          <span class="text-lg md:text-2xl font-black text-gray-800 tracking-tighter">Advanced Assembly</span>
+    <div class="flex flex-col md:flex-row items-center gap-10 opacity-70 grayscale hover:grayscale-0 transition-opacity duration-500">
+      <span class="text-sm font-bold text-gray-400 border-r border-gray-100 pr-10 uppercase tracking-widest text-center md:text-left shrink-0">Industrial Capabilities</span>
+      <!-- Infinite Ticker Container -->
+      <div class="overflow-hidden w-full relative">
+        <div class="ticker-container flex items-center md:gap-16">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-8 md:gap-16">
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">CAD/CAM Integration</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">3-Axis VMC Machining</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">Advanced Tool Assembly</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">Mould Trials</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+          </div>
+          <!-- Set 2 (Duplicate for Seamless Loop) -->
+          <div class="flex items-center gap-8 md:gap-16">
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">CAD/CAM Integration</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">3-Axis VMC Machining</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">Advanced Tool Assembly</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+            <span class="text-lg md:text-xl font-black text-gray-800 tracking-tighter">Mould Trials</span>
+            <span class="text-lg md:text-xl font-black text-gray-300">|</span>
+          </div>
         </div>
       </div>
     </div>
