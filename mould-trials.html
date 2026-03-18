@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mould Trials | BestChem Technology</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { primary: '#1E3A8A', secondary: '#0EA5E9', accent: '#22C55E', dark: '#0F172A', light: '#F8FAFC' }, fontFamily: { sans: ['Inter', 'sans-serif'] }, maxWidth: { container: '1200px' } } }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased font-sans text-dark bg-light selection:bg-secondary selection:text-white">
+
+<!-- Navigation -->
+<nav class="fixed w-full z-50 glass-nav transition-all duration-300 py-3 shadow-sm border-b border-gray-100" id="navbar">
+  <div class="max-w-container mx-auto px-4 md:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="flex items-center relative group">
+        <img src="images/logo.png" alt="BestChem Logo" class="h-12 md:h-[60px] w-auto transition-transform group-hover:scale-105">
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-dark font-medium link-hover hover:text-primary transition-colors text-sm">Home</a>
+        <a href="about.html" class="text-dark font-medium link-hover hover:text-primary transition-colors text-sm">About</a>
+        <a href="workspace.html" class="text-dark font-medium link-hover hover:text-primary transition-colors text-sm">Workspace</a>
+        <div class="relative group dropdown py-4">
+          <a href="services.html" class="text-dark font-medium link-hover hover:text-primary transition-colors text-sm group-hover:text-primary transition-colors flex items-center text-sm">
+            Services
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <div class="dropdown-menu absolute hidden left-0 mt-4 w-[280px] bg-white rounded-xl shadow-lg border-gray-100/50 border border-gray-100 py-2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto origin-top-left transform scale-95 group-hover:scale-100">
+            <a href="injection-mould.html" class="block px-6 py-3 text-sm text-gray-600 font-medium hover:bg-light hover:text-primary transition-colors">Injection Mould Design</a>
+            <a href="vmc-machining.html" class="block px-6 py-3 text-sm text-gray-600 font-medium hover:bg-light hover:text-primary transition-colors border-t border-gray-50">Precision VMC Machining</a>
+            <a href="tool-assembly.html" class="block px-6 py-3 text-sm text-gray-600 font-medium hover:bg-light hover:text-primary transition-colors border-t border-gray-50">Tool Assembly</a>
+            <a href="mould-trials.html" class="block px-6 py-3 text-sm text-gray-600 font-medium hover:bg-light hover:text-primary transition-colors border-t border-gray-50">Mould Trials</a>
+            <a href="vmc-jobwork.html" class="block px-6 py-3 text-sm text-gray-600 font-medium hover:bg-light hover:text-primary transition-colors border-t border-gray-50">VMC Job Work</a>
+          </div>
+        </div>
+        <a href="gallery.html" class="text-dark font-medium link-hover hover:text-primary transition-colors text-sm">Gallery</a>
+        <a href="team.html" class="text-dark font-medium link-hover hover:text-primary transition-colors text-sm">Leadership</a>
+        <a href="contact.html" class="bg-dark hover:bg-primary text-white px-8 py-3.5 rounded-full font-medium btn-hover shadow-xl shadow-dark/20 inline-block text-sm">Contact Us</a>
+    
+      </div>
+
+      <button id="close-chat" class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+  </div>
+  <div class="h-64 p-6 overflow-y-auto bg-light/50" id="chat-messages">
+    <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm mb-4 border border-gray-100 max-w-[85%]">
+      <p class="text-sm text-gray-600 font-light leading-relaxed">Hello! I'm the BestChem AI assistant. How can I help you with your injection moulding or VMC machining project today?</p>
+    </div>
+  </div>
+  <div class="p-4 bg-white border-t border-gray-100 flex gap-2">
+    <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 bg-light border-none rounded-xl px-4 py-2 text-sm focus:ring-2 focus:ring-primary outline-none">
+    <button id="send-chat" class="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center shadow-lg shadow-primary/20 btn-hover">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+    </button>
+  </div>
+</div>
+
+</body>
+</html>

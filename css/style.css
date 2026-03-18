@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --primary: #1E3A8A;   /* Deep Blue */
+  --secondary: #0EA5E9; /* Bright Blue */
+  --accent: #22C55E;    /* Green */
+  --dark: #0F172A;      /* Dark bg */
+  --light: #F8FAFC;     /* Light bg */
+  
+  /* Apple/Stripe Luxury Variables */
+  --shadow-hover: 0 10px 40px -10px rgba(15, 23, 42, 0.12), 0 0 20px -5px rgba(15, 23, 42, 0.05);
+  --spring-ease: cubic-bezier(0.25, 1, 0.5, 1);
+  --btn-shadow: 0 4px 14px 0 rgba(30, 58, 138, 0.25);
+  --btn-shadow-hover: 0 6px 20px rgba(30, 58, 138, 0.23);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Premium typography features for Inter */
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.025em; /* Tighter Apple-style tracking */
+}
+
+/* --------------------------------------------------------------------------
+   Luxury Card Physics
+   -------------------------------------------------------------------------- */
+.card-hover {
+  transition: transform 0.5s var(--spring-ease), box-shadow 0.5s var(--spring-ease), border-color 0.5s ease !important;
+  will-change: transform, box-shadow;
+  border-color: rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02) !important;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.005) !important;
+  box-shadow: var(--shadow-hover) !important;
+  border-color: rgba(226, 232, 240, 1) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Luxury Button Physics
+   -------------------------------------------------------------------------- */
+.btn-hover {
+  transition: transform 0.4s var(--spring-ease), box-shadow 0.4s var(--spring-ease), background-color 0.2s ease, filter 0.2s ease !important;
+  position: relative;
+  will-change: transform, box-shadow;
+  box-shadow: var(--btn-shadow) !important;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--btn-shadow-hover) !important;
+  filter: brightness(1.04);
+}
+
+.btn-hover:active {
+  transform: scale(0.97) translateY(0) !important;
+  filter: brightness(0.96);
+  box-shadow: 0 2px 4px rgba(30, 58, 138, 0.15) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Image Hover Physics
+   -------------------------------------------------------------------------- */
+.img-hover {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.img-container {
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.img-container:hover .img-hover {
+  transform: scale(1.05) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Elegant Navigation Links
+   -------------------------------------------------------------------------- */
+.link-hover {
+  position: relative;
+  transition: color 0.3s ease, opacity 0.2s ease;
+}
+
+.link-hover:active {
+  opacity: 0.6;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+  opacity: 0;
+  transition: width 0.4s var(--spring-ease), opacity 0.3s ease;
+  border-radius: 2px;
+}
+
+.link-hover:hover::after,
+.link-hover.active::after {
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* Floating effect optimized - subtler */
+.float-effect {
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-3px); }
+  100% { transform: translateY(0px); }
+}
+
+/* --------------------------------------------------------------------------
+   Layout Utilities
+   -------------------------------------------------------------------------- */
+/* Soft, multidimensional gradient like Stripe */
+.hero-overlay {
+  background: radial-gradient(ellipse at top right, rgba(30,58,138,0.7) 0%, transparent 70%),
+              radial-gradient(ellipse at bottom left, rgba(15,23,42,0.95) 0%, rgba(30,58,138,0.85) 100%);
+}
+
+.hero-logo-img {
+  height: 60px;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Glassmorphism Refinement (Apple Style) */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.content-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Responsiveness Hardening */
+a[href^="mailto:"], a[href^="tel:"] {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Floating Action Hub (WhatsApp & Chat) */
+.floating-hub {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.fab-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.fab-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.fab-btn:active {
+  transform: scale(0.9);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chatbot-btn {
+  background: #1E3A8A;
+  background: linear-gradient(135deg, #1E3A8A 0%, #0EA5E9 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fab-label {
+  position: absolute;
+  right: 110%;
+  background: #0F172A;
+  color: white;
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fab-btn:hover .fab-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Notification Pulse */
+.notification-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background: #FF3B30;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(0.8); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(0.8); opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+  .floating-hub {
+    bottom: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+  .fab-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+}
